@@ -5,6 +5,7 @@ RUN apt dist-upgrade -y
 RUN apt autoremove -y
 RUN apt clean -y
 RUN apt install -y ca-certificates-java 
+RUN apt install -y iputils-ping
 RUN echo "install console-setup" && \
     echo "console-setup   console-setup/codeset47 select  # Latin1 and Latin5 - western Europe and Turkic languages" | debconf-set-selections && \
     echo "console-setup   console-setup/fontface47        select  Fixed" | debconf-set-selections && \
